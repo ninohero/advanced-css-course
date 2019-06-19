@@ -14,3 +14,8 @@ html {
 body {
     box-sizing: border-box;
 }
+
+::selection {
+    background-color: #3f3f0e;
+    color: #efefdf;
+}
