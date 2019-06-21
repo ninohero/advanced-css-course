@@ -26,6 +26,7 @@
   --color-gray-dark-1: #333;
   --color-gray-dark-2: #777;
   --color-gray-dark-3: #999;
+  --color-gray-dark-4: rgb(68, 58, 47);
   --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
   --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
   --line: 1px solid var(--color-gray-light-2); }
@@ -402,7 +403,7 @@ body {
     align-self: flex-end;
     transform-origin: center center; }
   .dial__marker {
-    background-color: #000;
+    background-color: var(--color-gray-dark-4);
     height: 2px;
     width: 20rem;
     transform-origin: bottom;
@@ -411,6 +412,12 @@ body {
       transform: rotateZ(-40deg); }
     .dial__marker-2 {
       transform: rotateZ(-100deg); }
+    .dial__marker span {
+      font-size: 1.2rem;
+      color: var(--color-gray-dark-4);
+      z-index: 35;
+      margin-left: 21rem;
+      margin-top: .6rem; }
   .dial__case {
     background-color: var(--color-gray-light-2);
     height: 11rem;
@@ -441,6 +448,10 @@ body {
     border-top-left-radius: 14rem;
     border-top-right-radius: 14rem;
     z-index: 40; }
+  .dial .percent-full {
+    z-index: 100;
+    color: var(--color-gray-dark-1);
+    bottom: 1.5rem; }
 
 .test-animation {
   display: flex;

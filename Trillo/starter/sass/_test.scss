@@ -35,7 +35,7 @@ $size: 10rem;
   }
 
   &__marker {
-    background-color: #000;
+    background-color: var(--color-gray-dark-4);
     height: 2px;
     width: ($size) * 2;
     transform-origin: bottom;
@@ -47,6 +47,14 @@ $size: 10rem;
 
     &-2 {
       transform: rotateZ(-100deg);
+    }
+
+    span {
+      font-size: 1.2rem;
+      color: var(--color-gray-dark-4);
+      z-index: 35;
+      margin-left: $size * 2 + 1rem;
+      margin-top: .6rem;
     }
   }
 
@@ -86,6 +94,12 @@ $size: 10rem;
     border-top-left-radius: ($size - 3rem) * 2;
     border-top-right-radius: ($size - 3rem) * 2;
     z-index: 40;
+  }
+
+  .percent-full {
+    z-index: 100;
+    color: var(--color-gray-dark-1);
+    bottom: 1.5rem;
   }
 }
 
