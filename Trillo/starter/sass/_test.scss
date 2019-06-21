@@ -1,0 +1,142 @@
+$size: 10rem;
+
+.second-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  top: -($size + 1rem);
+}
+
+.dial-cover {
+  background-color: var(--color-gray-light-2);
+  width: ($size + 1rem) * 2;
+  height: $size;
+  z-index: 60;
+  position: absolute;
+  top: ($size + 1rem) * 2;
+}
+
+.dial {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: ($size + 1rem) * 2;
+  height: ($size + 1rem) * 2;
+  z-index: 1;
+
+  *{
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+    //justify-content: center;
+    transform-origin: center center;
+  }
+
+  &__marker {
+    background-color: #000;
+    height: 2px;
+    width: ($size) * 2;
+    transform-origin: bottom;
+    z-index: 35;
+
+    &-1 {
+      transform: rotateZ(-40deg);
+    }
+
+    &-2 {
+      transform: rotateZ(-100deg);
+    }
+  }
+
+  &__case {
+    background-color: var(--color-gray-light-2);
+    height: $size + 1rem;
+    width: ($size + 1rem) * 2;
+    border-top-left-radius: ($size + 1rem) * 2;
+    border-top-right-radius: ($size + 1rem) * 2;
+    z-index: 10;
+  }
+
+  &__backface {
+    background-color: #fff;
+    height: $size;
+    width: $size * 2;
+    border-top-left-radius: $size * 2;
+    border-top-right-radius: $size * 2;
+    z-index: 20;
+  }
+
+  &__progress-indicator {
+    background-color: green;
+    height: $size;
+    width: $size * 2;
+    border-top-left-radius: $size * 2;
+    border-top-right-radius: $size * 2;
+    z-index: 30;
+    transform: rotateZ(-70deg);
+    transform-origin: bottom;
+  }
+
+  &__progress-cover {
+    background-color: var(--color-gray-light-2);
+    height: ($size - 3rem);
+    width: ($size - 3rem) * 2;
+    border-top-left-radius: ($size - 3rem) * 2;
+    border-top-right-radius: ($size - 3rem) * 2;
+    z-index: 40;
+  }
+}
+
+
+.test-animation {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-gray-light-2);
+  font-size: 2rem;
+  padding: 5rem;
+
+  .dot {
+    transition: all 1s;
+    padding: 2rem;
+    position: relative;
+    left: 50rem;
+
+    .inner {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background-color: goldenrod;
+      border-radius: 50%;
+      height: 2rem;
+      width: 2rem;
+      padding: 2rem;
+      animation: move 4s ease-out infinite;
+      animation-play-state: paused;
+
+      &:hover {
+        animation-play-state: running;
+      }
+    }
+
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translate(3rem) translateY(3rem);
+  }
+  50% {
+    transform: translate(-3rem) translateY(3rem);
+  }
+  75% {
+    transform: translate(-3rem) translateY(-3rem);
+  }
+  100% {
+    transform: translate(3rem) translateY(-3rem);
+  }
+}

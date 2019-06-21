@@ -372,3 +372,109 @@ body {
     color: var(--color-gray-light-2);
     font-family: sans-serif;
     z-index: 1; }
+
+.second-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  top: -11rem; }
+
+.dial-cover {
+  background-color: var(--color-gray-light-2);
+  width: 22rem;
+  height: 10rem;
+  z-index: 60;
+  position: absolute;
+  top: 22rem; }
+
+.dial {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 22rem;
+  height: 22rem;
+  z-index: 1; }
+  .dial * {
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+    transform-origin: center center; }
+  .dial__marker {
+    background-color: #000;
+    height: 2px;
+    width: 20rem;
+    transform-origin: bottom;
+    z-index: 35; }
+    .dial__marker-1 {
+      transform: rotateZ(-40deg); }
+    .dial__marker-2 {
+      transform: rotateZ(-100deg); }
+  .dial__case {
+    background-color: var(--color-gray-light-2);
+    height: 11rem;
+    width: 22rem;
+    border-top-left-radius: 22rem;
+    border-top-right-radius: 22rem;
+    z-index: 10; }
+  .dial__backface {
+    background-color: #fff;
+    height: 10rem;
+    width: 20rem;
+    border-top-left-radius: 20rem;
+    border-top-right-radius: 20rem;
+    z-index: 20; }
+  .dial__progress-indicator {
+    background-color: green;
+    height: 10rem;
+    width: 20rem;
+    border-top-left-radius: 20rem;
+    border-top-right-radius: 20rem;
+    z-index: 30;
+    transform: rotateZ(-70deg);
+    transform-origin: bottom; }
+  .dial__progress-cover {
+    background-color: var(--color-gray-light-2);
+    height: 7rem;
+    width: 14rem;
+    border-top-left-radius: 14rem;
+    border-top-right-radius: 14rem;
+    z-index: 40; }
+
+.test-animation {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-gray-light-2);
+  font-size: 2rem;
+  padding: 5rem; }
+  .test-animation .dot {
+    transition: all 1s;
+    padding: 2rem;
+    position: relative;
+    left: 50rem; }
+    .test-animation .dot .inner {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background-color: goldenrod;
+      border-radius: 50%;
+      height: 2rem;
+      width: 2rem;
+      padding: 2rem;
+      animation: move 4s ease-out infinite;
+      animation-play-state: paused; }
+      .test-animation .dot .inner:hover {
+        animation-play-state: running; }
+
+@keyframes move {
+  0% {
+    transform: translateX(0) translateY(0); }
+  25% {
+    transform: translate(3rem) translateY(3rem); }
+  50% {
+    transform: translate(-3rem) translateY(3rem); }
+  75% {
+    transform: translate(-3rem) translateY(-3rem); }
+  100% {
+    transform: translate(3rem) translateY(-3rem); } }
