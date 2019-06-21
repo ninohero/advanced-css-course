@@ -374,106 +374,115 @@ body {
     font-family: sans-serif;
     z-index: 1; }
 
-.second-container {
+.guages {
+  display: flex;
+  margin-left: 5rem; }
+
+.guage {
   display: flex;
   align-content: center;
   justify-content: center;
   position: relative;
-  top: -11rem; }
-
-.dial-cover {
-  background-color: var(--color-gray-light-2);
-  width: 22rem;
-  height: 10rem;
-  z-index: 60;
-  position: absolute;
-  top: 22rem; }
-
-.dial {
-  position: relative;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 22rem;
-  height: 22rem;
-  z-index: 1; }
-  .dial * {
-    position: absolute;
-    display: flex;
-    align-self: flex-end;
-    transform-origin: center center; }
-  .dial__marker {
-    background-color: var(--color-gray-dark-4);
-    height: 2px;
-    width: 20rem;
-    transform-origin: bottom;
-    z-index: 35; }
-    .dial__marker-1 {
-      transform: rotateZ(-40deg); }
-    .dial__marker-2 {
-      transform: rotateZ(-100deg); }
-    .dial__marker span {
-      font-size: 1.2rem;
-      color: var(--color-gray-dark-4);
-      z-index: 35;
-      margin-left: 21rem;
-      margin-top: .6rem; }
-  .dial__case {
+  top: -7rem;
+  margin-right: 5rem; }
+  .guage .dial-cover {
     background-color: var(--color-gray-light-2);
-    height: 11rem;
     width: 22rem;
-    border-top-left-radius: 22rem;
-    border-top-right-radius: 22rem;
-    z-index: 10; }
-  .dial__backface {
-    background-color: #fff;
     height: 10rem;
-    width: 20rem;
-    border-top-left-radius: 20rem;
-    border-top-right-radius: 20rem;
-    z-index: 20; }
-  .dial__progress-indicator {
-    background-color: green;
-    height: 10rem;
-    width: 20rem;
-    border-top-left-radius: 20rem;
-    border-top-right-radius: 20rem;
-    z-index: 30;
-    transform: rotateZ(-70deg);
-    transform-origin: bottom; }
-  .dial__progress-cover {
-    background-color: var(--color-gray-light-2);
-    height: 7rem;
-    width: 14rem;
-    border-top-left-radius: 14rem;
-    border-top-right-radius: 14rem;
-    z-index: 40; }
-  .dial .figure {
-    z-index: 100;
-    color: var(--color-gray-dark-1);
-    font-size: 1.2rem; }
-    .dial .figure-percent-full {
-      font-size: 2rem;
-      bottom: 1.5rem; }
-    .dial .figure-capacity {
-      left: -1.5rem;
-      bottom: 0; }
-    .dial .figure-actual {
-      right: -1.5rem;
-      bottom: 0; }
+    z-index: 60;
+    position: absolute;
+    top: 22rem; }
+  .guage .dial {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 22rem;
+    height: 22rem;
+    z-index: 1; }
+    .guage .dial * {
+      position: absolute;
+      display: flex;
+      align-self: flex-end;
+      transform-origin: center center; }
+    .guage .dial__marker {
+      background-color: var(--color-gray-dark-4);
+      height: 2px;
+      width: 20rem;
+      transform-origin: bottom;
+      z-index: 35; }
+      .guage .dial__marker-1 {
+        transform: rotateZ(-40deg); }
+      .guage .dial__marker-2 {
+        transform: rotateZ(-100deg); }
+      .guage .dial__marker span {
+        font-size: 1.2rem;
+        color: var(--color-gray-dark-4);
+        z-index: 35;
+        margin-left: 21rem;
+        margin-top: .6rem; }
+    .guage .dial__case {
+      background-color: var(--color-gray-light-2);
+      height: 11rem;
+      width: 22rem;
+      border-top-left-radius: 22rem;
+      border-top-right-radius: 22rem;
+      z-index: 10; }
+    .guage .dial__backface {
+      background-color: #fff;
+      height: 10rem;
+      width: 20rem;
+      border-top-left-radius: 20rem;
+      border-top-right-radius: 20rem;
+      z-index: 20; }
+    .guage .dial__progress-indicator {
+      background-color: green;
+      height: 10rem;
+      width: 20rem;
+      border-top-left-radius: 20rem;
+      border-top-right-radius: 20rem;
+      z-index: 30;
+      transform: rotateZ(-70deg);
+      transform-origin: bottom; }
+    .guage .dial__progress-cover {
+      background-color: var(--color-gray-light-2);
+      height: 7rem;
+      width: 14rem;
+      border-top-left-radius: 14rem;
+      border-top-right-radius: 14rem;
+      z-index: 40; }
+    .guage .dial .figure {
+      z-index: 100;
+      color: var(--color-gray-dark-1);
+      font-size: 1.2rem; }
+      .guage .dial .figure-percent-full {
+        font-size: 2rem;
+        bottom: 1.5rem; }
+      .guage .dial .figure-capacity {
+        left: -1.5rem;
+        bottom: 0; }
+      .guage .dial .figure-actual {
+        right: -1.5rem;
+        bottom: 0; }
+  .guage__container-2 .dial__progress-indicator {
+    background-color: #43a303;
+    transform: rotateZ(-95deg); }
+  .guage__container-3 .dial__progress-indicator {
+    background-color: #e91e03;
+    transform: rotateZ(-135deg); }
 
-.test-animation {
+.dots {
   display: flex;
   width: 100%;
   background-color: var(--color-gray-light-2);
   font-size: 2rem;
   padding: 5rem; }
-  .test-animation .dot {
+  .dots .dot {
     transition: all 1s;
     padding: 2rem;
     position: relative;
     left: 50rem; }
-    .test-animation .dot .inner {
+    .dots .dot .inner {
       display: flex;
       justify-content: center;
       align-content: center;
@@ -484,7 +493,7 @@ body {
       padding: 2rem;
       animation: move 4s ease-out infinite;
       animation-play-state: paused; }
-      .test-animation .dot .inner:hover {
+      .dots .dot .inner:hover {
         animation-play-state: running; }
 
 @keyframes move {

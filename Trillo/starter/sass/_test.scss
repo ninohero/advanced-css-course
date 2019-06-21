@@ -1,125 +1,147 @@
 $size: 10rem;
 
-.second-container {
+.guages {
+  display: flex;
+  margin-left: $size/2;
+}
+
+.guage {
   display: flex;
   align-content: center;
   justify-content: center;
   position: relative;
-  top: -($size + 1rem);
-}
+  top: -($size - 3rem);
+  margin-right: $size/2;
 
-.dial-cover {
-  background-color: var(--color-gray-light-2);
-  width: ($size + 1rem) * 2;
-  height: $size;
-  z-index: 60;
-  position: absolute;
-  top: ($size + 1rem) * 2;
-}
-
-.dial {
-  position: relative;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: ($size + 1rem) * 2;
-  height: ($size + 1rem) * 2;
-  z-index: 1;
-
-  * {
-    position: absolute;
-    display: flex;
-    align-self: flex-end;
-    //justify-content: center;
-    transform-origin: center center;
-  }
-
-  &__marker {
-    background-color: var(--color-gray-dark-4);
-    height: 2px;
-    width: ($size) * 2;
-    transform-origin: bottom;
-    z-index: 35;
-
-    &-1 {
-      transform: rotateZ(-40deg);
-    }
-
-    &-2 {
-      transform: rotateZ(-100deg);
-    }
-
-    span {
-      font-size: 1.2rem;
-      color: var(--color-gray-dark-4);
-      z-index: 35;
-      margin-left: $size * 2 + 1rem;
-      margin-top: .6rem;
-    }
-  }
-
-  &__case {
+  .dial-cover {
     background-color: var(--color-gray-light-2);
-    height: $size + 1rem;
     width: ($size + 1rem) * 2;
-    border-top-left-radius: ($size + 1rem) * 2;
-    border-top-right-radius: ($size + 1rem) * 2;
-    z-index: 10;
-  }
-
-  &__backface {
-    background-color: #fff;
     height: $size;
-    width: $size * 2;
-    border-top-left-radius: $size * 2;
-    border-top-right-radius: $size * 2;
-    z-index: 20;
+    z-index: 60;
+    position: absolute;
+    top: ($size + 1rem) * 2;
   }
 
-  &__progress-indicator {
-    background-color: green;
-    height: $size;
-    width: $size * 2;
-    border-top-left-radius: $size * 2;
-    border-top-right-radius: $size * 2;
-    z-index: 30;
-    transform: rotateZ(-70deg);
-    transform-origin: bottom;
-  }
+  .dial {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: ($size + 1rem) * 2;
+    height: ($size + 1rem) * 2;
+    z-index: 1;
 
-  &__progress-cover {
-    background-color: var(--color-gray-light-2);
-    height: ($size - 3rem);
-    width: ($size - 3rem) * 2;
-    border-top-left-radius: ($size - 3rem) * 2;
-    border-top-right-radius: ($size - 3rem) * 2;
-    z-index: 40;
-  }
-
-  .figure {
-    z-index: 100;
-    color: var(--color-gray-dark-1);
-    font-size: 1.2rem;
-
-    &-percent-full {
-      font-size: 2rem;
-      bottom: 1.5rem;
+    * {
+      position: absolute;
+      display: flex;
+      align-self: flex-end;
+      //justify-content: center;
+      transform-origin: center center;
     }
 
-    &-capacity {
-      left: -1.5rem;
-      bottom: 0
+    &__marker {
+      background-color: var(--color-gray-dark-4);
+      height: 2px;
+      width: ($size) * 2;
+      transform-origin: bottom;
+      z-index: 35;
+
+      &-1 {
+        transform: rotateZ(-40deg);
+      }
+
+      &-2 {
+        transform: rotateZ(-100deg);
+      }
+
+      span {
+        font-size: 1.2rem;
+        color: var(--color-gray-dark-4);
+        z-index: 35;
+        margin-left: $size * 2 + 1rem;
+        margin-top: .6rem;
+      }
     }
 
-    &-actual {
-      right: -1.5rem;
-      bottom: 0
+    &__case {
+      background-color: var(--color-gray-light-2);
+      height: $size + 1rem;
+      width: ($size + 1rem) * 2;
+      border-top-left-radius: ($size + 1rem) * 2;
+      border-top-right-radius: ($size + 1rem) * 2;
+      z-index: 10;
+    }
+
+    &__backface {
+      background-color: #fff;
+      height: $size;
+      width: $size * 2;
+      border-top-left-radius: $size * 2;
+      border-top-right-radius: $size * 2;
+      z-index: 20;
+    }
+
+    &__progress-indicator {
+      background-color: green;
+      height: $size;
+      width: $size * 2;
+      border-top-left-radius: $size * 2;
+      border-top-right-radius: $size * 2;
+      z-index: 30;
+      transform: rotateZ(-70deg);
+      transform-origin: bottom;
+    }
+
+    &__progress-cover {
+      background-color: var(--color-gray-light-2);
+      height: ($size - 3rem);
+      width: ($size - 3rem) * 2;
+      border-top-left-radius: ($size - 3rem) * 2;
+      border-top-right-radius: ($size - 3rem) * 2;
+      z-index: 40;
+    }
+
+    .figure {
+      z-index: 100;
+      color: var(--color-gray-dark-1);
+      font-size: 1.2rem;
+
+      &-percent-full {
+        font-size: 2rem;
+        bottom: 1.5rem;
+      }
+
+      &-capacity {
+        left: -1.5rem;
+        bottom: 0
+      }
+
+      &-actual {
+        right: -1.5rem;
+        bottom: 0
+      }
+    }
+  }
+
+  &__container-2 {
+    .dial__progress-indicator {
+      background-color: rgb(67, 163, 3);
+      transform: rotateZ(-95deg);
+    }
+  }
+
+  &__container-3 {
+    .dial__progress-indicator {
+      background-color: rgb(233, 30, 3);
+      transform: rotateZ(-135deg);
     }
   }
 }
 
 
-.test-animation {
+
+
+.dots {
   display: flex;
   width: 100%;
   background-color: var(--color-gray-light-2);
