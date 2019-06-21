@@ -26,7 +26,7 @@ $size: 10rem;
   height: ($size + 1rem) * 2;
   z-index: 1;
 
-  *{
+  * {
     position: absolute;
     display: flex;
     align-self: flex-end;
@@ -96,10 +96,25 @@ $size: 10rem;
     z-index: 40;
   }
 
-  .percent-full {
+  .figure {
     z-index: 100;
     color: var(--color-gray-dark-1);
-    bottom: 1.5rem;
+    font-size: 1.2rem;
+
+    &-percent-full {
+      font-size: 2rem;
+      bottom: 1.5rem;
+    }
+
+    &-capacity {
+      left: -1.5rem;
+      bottom: 0
+    }
+
+    &-actual {
+      right: -1.5rem;
+      bottom: 0
+    }
   }
 }
 

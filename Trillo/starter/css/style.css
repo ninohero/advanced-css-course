@@ -448,10 +448,19 @@ body {
     border-top-left-radius: 14rem;
     border-top-right-radius: 14rem;
     z-index: 40; }
-  .dial .percent-full {
+  .dial .figure {
     z-index: 100;
     color: var(--color-gray-dark-1);
-    bottom: 1.5rem; }
+    font-size: 1.2rem; }
+    .dial .figure-percent-full {
+      font-size: 2rem;
+      bottom: 1.5rem; }
+    .dial .figure-capacity {
+      left: -1.5rem;
+      bottom: 0; }
+    .dial .figure-actual {
+      right: -1.5rem;
+      bottom: 0; }
 
 .test-animation {
   display: flex;
