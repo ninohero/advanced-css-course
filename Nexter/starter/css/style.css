@@ -382,3 +382,18 @@ body {
 .footer {
   background-color: #101d2c;
   grid-column: full-start / full-end; }
+
+.test-animation {
+  display: flex;
+  width: 100%;
+  background-color: #f9f7f6;
+  font-size: 2rem;
+  padding: 5rem; }
+  .test-animation .dot {
+    translate: all 1s;
+    margin: 2rem; }
+    .test-animation .dot .inner {
+      background-color: goldenrod;
+      border-radius: 50%;
+      height: 2rem;
+      width: 2rem; }
